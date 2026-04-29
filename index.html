@@ -359,7 +359,7 @@ Raw JSON array only. No markdown. No preamble.`;
   try {
     const res = await fetch('https://trendradar-proxy.patrick-wolf1.workers.dev', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ model:'claude-3-5-sonnet-20241022', max_tokens:4000, messages:[{role:'user',content:prompt}] })
+      body: JSON.stringify({ model:'claude-haiku-4-5-20251001', max_tokens:4000, messages:[{role:'user',content:prompt}] })
     });
     const data = await res.json();
     if (data.type === 'error') throw new Error(data.error?.message || JSON.stringify(data));
@@ -466,7 +466,7 @@ Raw JSON object only. No markdown. No preamble.`;
   try {
     const res = await fetch('https://trendradar-proxy.patrick-wolf1.workers.dev', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ model:'claude-3-5-sonnet-20241022', max_tokens:4000, messages:[{role:'user',content:prompt}] })
+      body: JSON.stringify({ model:'claude-haiku-4-5-20251001', max_tokens:4000, messages:[{role:'user',content:prompt}] })
     });
     const data = await res.json();
     if (!res.ok || data.type === 'error') throw new Error(data.error?.message||JSON.stringify(data));
@@ -602,7 +602,7 @@ async function loadSurprise() {
   try {
     const res = await fetch('https://trendradar-proxy.patrick-wolf1.workers.dev', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ model:'claude-3-5-sonnet-20241022', max_tokens:4000, messages:[{role:'user',content:prompt}] })
+      body: JSON.stringify({ model:'claude-haiku-4-5-20251001', max_tokens:4000, messages:[{role:'user',content:prompt}] })
     });
     const data = await res.json();
     if (!res.ok || data.type === 'error') throw new Error(data.error?.message||JSON.stringify(data));
